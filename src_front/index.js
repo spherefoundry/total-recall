@@ -116,6 +116,21 @@ class ResultsPage extends AppPage {
             let newElement = $('<img/>').attr('src', image.medium);
             $('#results-page-product-images').append(newElement);
         }
+
+        let recalled = false;
+        for (const event of product.events) {
+            if (event.content.data.type == 'recall') {
+                recalled = true;
+            }
+        }
+
+        if (recalled) {
+            $('#results-page-product-recall').removeClass('hidden');
+            $('#results-page-product-no-recall').addClass('hidden');
+        } else {
+            $('#results-page-product-recall').addClass('hidden');
+            $('#results-page-product-no-recall').removeClass('hidden');
+        }
     }
 
     install() {
@@ -134,5 +149,5 @@ class ResultsPage extends AppPage {
 $(function () {
     let app = new App();
     app.start();
-    // app.scannerPage.onDetected('7610200067395');
+    // app.scannerPage.onDetected('22125880');
 });

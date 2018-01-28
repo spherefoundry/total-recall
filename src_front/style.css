@@ -6,9 +6,24 @@ body {
     display: none;
 }
 
+#header {
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#page-viewport {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #scanner-page {
-    width: 640px;
-    height: 480px;
+    min-width: 100vw;
+    min-height: 350px;
     position: relative;
 }
 
@@ -26,7 +41,7 @@ body {
 
 #results-page-product-name {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.2em;
     margin: 10px;
 }
 
@@ -41,4 +56,27 @@ body {
 #results-page-product-images > img{
     padding: 5px;
     display: block;
+}
+
+#results-page-product-recall {
+    border: 6px solid red;
+    padding: 5px;
+}
+
+#results-page-product-recall-warning {
+    color: red;
+    font-weight: bold;
+}
+
+#results-page-product-recall-instructions-header, #results-page-product-recall-reason-header {
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#results-page-product-no-recall {
+    border: 6px solid green;
+    padding: 5px;
+    color: green;
+    font-weight: bold;
 }

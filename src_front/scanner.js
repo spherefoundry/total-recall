@@ -19,7 +19,8 @@ const config = {
     frequency: 10,
     decoder: {
         readers: [
-            'ean_reader'
+            'ean_reader',
+            'ean_8_reader'
         ]
     },
     locate: true
