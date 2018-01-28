@@ -6,7 +6,9 @@
   "scripts": {
     "dev:start": "run-p dev:back:start dev:front:start",
     "dev:back:start": "export NODE_ENV=dev && nodemon --watch src_back --exec babel-node --inspect src_back/app.js",
-    "dev:front:start": "webpack --watch"
+    "dev:front:start": "webpack --watch",
+    "build" : "webpack && babel src_back --out-dir dist_back",
+    "start" : "node dist_back/app.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
