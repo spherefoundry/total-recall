@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#scanner-page {
+    width: 640px;
+    height: 480px;
+    position: relative;
+}
+
+#scanner-page canvas, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#results-page {
+    padding: 10px;
+}
+
+#results-page-product-name {
+    font-weight: bold;
+    font-size: 2em;
+    margin: 10px;
+}
+
+#results-page-product-images {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#results-page-product-images > img{
+    padding: 5px;
+    display: block;
+}
