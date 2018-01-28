@@ -116,6 +116,12 @@ class ResultsPage extends AppPage {
             let newElement = $('<img/>').attr('src', image.medium);
             $('#results-page-product-images').append(newElement);
         }
+        
+        $('#results-page-nutrition-facts-table').children().remove();
+        for (const nutrient of Object.values(product.content.data.nutrients)) {
+            let newElement = $(`<div class='row'><div class='key'>${nutrient.name_translations['en']}</div><div class='value'>${nutrient.per_hundred} ${nutrient.unit}</div></div>`);
+            $('#results-page-nutrition-facts-table').append(newElement);
+        }
 
         let recalled = false;
         for (const event of product.events) {

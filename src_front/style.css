@@ -58,6 +58,36 @@ body {
     display: block;
 }
 
+#results-page-nutrition-facts {
+    margin: 10px;
+}
+
+#results-page-nutrition-facts-header {
+    color: darkgray;
+}
+
+#results-page-nutrition-facts-table {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#results-page-nutrition-facts-table > .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#results-page-nutrition-facts-table > .row > .key {
+    
+}
+
+#results-page-nutrition-facts-table > .row > .value {
+    
+}
+
 #results-page-product-recall {
     border: 6px solid red;
     padding: 5px;
