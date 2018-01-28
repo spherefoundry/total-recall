@@ -21,7 +21,9 @@ const productRouter = require('./routes/product');
 app.use('/api/product', productRouter);
 
 // Start the server
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
+
+console.log('Will start on: %s', port);
 
 var server = app.listen(port, () => {
     var host = server.address().address;
